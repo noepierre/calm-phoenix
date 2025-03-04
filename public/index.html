@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion en ligne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div id="pseudo-container">
+        <input type="text" id="pseudo-input" placeholder="Entrez votre pseudo" />
+        <input type="file" id="profile-pic-input" accept="image/*" />
+        <button id="join-chat">Rejoindre le chat</button>
+    </div>
+
+    <div id="chat-container" style="display: none; flex-direction: column;">
+        <div id="chat-header">
+            
+            <div id="background-container">
+                <input type="file" id="background-input" accept="image/*" />
+                <button id="change-background-button">Changer le fond d'écran</button>
+            </div>
+
+            <h1>Chat privé</h1>
+        </div>
+        
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Entrez votre message" />
+        <button id="send-message">Envoyer</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
